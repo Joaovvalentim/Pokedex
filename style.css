@@ -1,0 +1,277 @@
+body {
+	background : rgb(28, 0, 0);
+	background : linear-gradient(90deg, rgba(28, 0, 0, 1) 0%, rgba(255, 41, 41, 1) 100%);
+	color      : white;
+	margin     : 0;
+	font-family: rubik;
+}
+
+.container {
+	padding: 40px;
+	margin : 0 auto;
+}
+
+h1 {
+	text-align: center;
+	font-size : 54px;
+}
+
+.pokedex {
+	display              : grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	grid-gap             : 20px;
+	padding-inline-start : 0;
+}
+
+.card {
+	list-style   : none;
+	padding      : 40px;
+	color        : #222;
+	text-align   : center;
+	border-radius: 20px;
+	position     : relative;
+}
+
+.card::after {
+	content         : "";
+	display         : block;
+	width           : 50%;
+	height          : 45%;
+	border-radius   : 100%;
+	background-color: #fff;
+	opacity         : .7;
+	position        : absolute;
+	top             : 15%;
+	left            : 25%;
+}
+
+.steel {
+	background-color: #B8B8D0;
+}
+
+.fire {
+	background-color: #F08030;
+}
+.ghost {
+	background-color: #705898;
+}
+
+
+.grass {
+	background-color: #78C850
+}
+
+.electric {
+	background-color: #F8D030;
+}
+
+.water{
+	background-color: #6890F0
+}
+.ice {
+	background-color: #98D8D8
+}
+
+.ground {
+	background-color: #E0C068;
+}
+
+.rock {
+	background-color: #B8A038;
+}
+
+.fairy {
+	background-color: #EE99AC;
+}
+
+.poison {
+	background-color: #A040A0;
+}
+
+.bug {
+	background-color: #A8B820;
+}
+
+.dragon {
+	background-color: #7038F8;
+}
+
+.psychic {
+	background-color: #F85888;
+}
+
+.flying {
+	background-color: #A890F0;
+}
+
+.fighting {
+	background-color: #C03028;
+}
+
+.normal {
+	background-color: #A8A878;
+}
+
+.card:hover {
+	animation: bounce 0.5s linear;
+}
+
+.card-title {
+	text-transform: capitalize;
+	margin-bottom : 0px;
+	font-size     : 32px;
+	font-weight   : normal;
+	position      : relative;
+	z-index       : 2;
+}
+
+.card-subtitle {
+	margin-top : 5px;
+	color      : #666;
+	font-weight: lighter;
+	position   : relative;
+	z-index    : 2;
+}
+
+.card-image {
+	height  : 180px;
+	position: relative;
+	z-index : 2;
+}
+
+.modal {
+	display         : flex;
+	width           : 100vw;
+	height          : 100vh;
+	z-index         : 10;
+	background-color: rgba(0, 0, 0, .5);
+	position        : fixed;
+	top             : 0;
+	left            : 0;
+	justify-content : center;
+	align-items     : center;
+}
+
+.modalContent {
+	display         : flex;
+	flex-direction  : column;
+	justify-content : flex-start;
+	align-items     : center;
+	background-color: white;
+	color           : black;
+	padding         : 35px;
+	width           : 80%;
+	height          : 80%;
+	border-radius   : 10px;
+	overflow-y      : auto;
+	overflow-x      : hidden;
+}
+
+.selectImage {
+	height  : 300px;
+	position: relative;
+}
+
+.status {
+	display         : flex;
+	background-color: #30a7d7;
+	color           : #fff;
+	border-radius   : 10px;
+	float           : left;
+	min-height      : 100px;
+	position        : relative;
+	padding         : 20px;
+	flex-direction  : row;
+	width           : 50%;
+	justify-content : space-around;
+	align-items     : center;
+}
+
+.img {
+	display        : flex;
+	justify-content: space-between;
+	width          : 80%;
+}
+
+.colum {
+	float      : left;
+	width      : 49.22%;
+	margin-left: 40px
+}
+
+
+.columUm ul {
+	margin         : 0;
+	padding        : 0;
+	list-style-type: none;
+}
+
+.columDois ul {
+	margin         : 0;
+	padding        : 0;
+	list-style-type: none;
+}
+
+span {
+	margin                  : 0;
+	padding                 : 0;
+	border                  : 0;
+	font-size               : 100%;
+	font                    : inherit;
+	vertical-align          : baseline;
+	-webkit-font-smoothing  : antialiased;
+	-webkit-text-size-adjust: 100%;
+}
+
+.atributeValue {
+	font-family: "Flexo-Medium", arial, sans-serif;
+	clear      : both;
+	color      : #212121;
+	float      : left;
+	font-size  : 125%;
+	white-space: normal;
+	word-break : break-word;
+}
+
+.atributeTitle {
+	font-family   : "Flexo-Medium", arial, sans-serif;
+	clear         : both;
+	color         : #fff;
+	float         : left;
+	font-size     : 100%;
+	text-transform: none;
+	white-space   : normal;
+	word-break    : break-word;
+}
+
+.columDois {
+	display        : block;
+	flex-direction : column;
+	justify-content: left;
+}
+
+.attrLine {
+	display        : flex;
+	white-space    : nowrap;
+	width          : 100%;
+	align-items    : center;
+	justify-content: space-between;
+}
+
+@keyframes bounce {
+	20% {
+		transform: translateY(-6px);
+	}
+
+	40% {
+		transform: translateY(0px);
+	}
+
+	80% {
+		transform: translateY(-2px);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
