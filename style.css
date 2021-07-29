@@ -1,9 +1,9 @@
 body {
-	background : rgb(28, 0, 0);
-	background : linear-gradient(90deg, rgba(28, 0, 0, 1) 0%, rgba(255, 41, 41, 1) 100%);
-	color      : white;
-	margin     : 0;
-	font-family: rubik;
+	background-image : url(https://wallpapercave.com/wp/wp3170170.jpg);
+	background-repeat: no-repeat;
+	color            : white;
+	margin           : 0;
+	font-family      : rubik;
 }
 
 .container {
@@ -18,9 +18,10 @@ h1 {
 
 .pokedex {
 	display              : grid;
-	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-	grid-gap             : 20px;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap             : 5px;
 	padding-inline-start : 0;
+	margin-left          : 115px;
 }
 
 .card {
@@ -30,6 +31,15 @@ h1 {
 	text-align   : center;
 	border-radius: 20px;
 	position     : relative;
+	box-shadow   : 0 4px 8px 0 rgb(0 0 0 / 30%);
+	transition   : 0.3s;
+	cursor       : pointer;
+	height       : 340px;
+	box-sizing   : border-box;
+}
+
+.flip-card:hover {
+	transform: rotateY(180deg);
 }
 
 .card::after {
@@ -50,71 +60,95 @@ h1 {
 }
 
 .fire {
-	background-color: #F08030;
+	background-image : url(https://pokemongohub.net/wp-content/uploads/2019/01/Fire-Types-696x392.jpg);
+	background-repeat: no-repeat;
 }
+
 .ghost {
-	background-color: #705898;
+	background-image : url(https://pokemongohub.net/wp-content/uploads/2019/01/Ghost-Types-696x392.jpg);
+	background-repeat: no-repeat;
 }
 
 
 .grass {
-	background-color: #78C850
+	background-image : url(https://pokemongohub.net/wp-content/uploads/2019/01/Grass-Types-696x392.jpg);
+	background-repeat: no-repeat;
 }
 
 .electric {
-	background-color: #F8D030;
+	background-image : url(https://pokemongohub.net/wp-content/uploads/2019/01/Electric-Types-696x392.jpg);
+	background-repeat: no-repeat;
 }
 
-.water{
-	background-color: #6890F0
+.water {
+	background-image : url(https://pokemongohub.net/wp-content/uploads/2019/01/Water-Types-696x392.jpg);
+	background-repeat: no-repeat;
 }
+
 .ice {
-	background-color: #98D8D8
+	background-image : url(https://pokemongohub.net/wp-content/uploads/2019/01/Ice-Types-696x392.jpg);
+	background-repeat: no-repeat;
+}
+
+.dark {
+	background-image: url(https://pokemongohub.net/wp-content/uploads/2019/01/Dark-Types-696x392.jpg);
+	background-image: no-repeat;
+
 }
 
 .ground {
-	background-color: #E0C068;
+	background-image : url(https://pokemongohub.net/wp-content/uploads/2019/01/Ground-Types-696x392.jpg);
+	background-repeat: no-repeat;
 }
 
 .rock {
-	background-color: #B8A038;
+	background-image: url(./oie_29151622Oy81U1xm.jpg);
 }
 
+
 .fairy {
-	background-color: #EE99AC;
+	background-image : url(./resized-image-Promo.jpeg);
+	background-repeat: no-repeat;
+	object-fit       : fill;
+	height           : 100%;
+
 }
 
 .poison {
-	background-color: #A040A0;
+	background-image : url(https://pokemongohub.net/wp-content/uploads/2019/01/Poison-Types-696x392.jpg);
+	background-repeat: no-repeat;
 }
 
 .bug {
-	background-color: #A8B820;
+	background-image : url(https://pokemongohub.net/wp-content/uploads/2019/01/Bug-Types-696x392.jpg);
+	background-repeat: no-repeat;
 }
 
 .dragon {
-	background-color: #7038F8;
+	background-image : url(https://pokemongohub.net/wp-content/uploads/2019/01/Dragon-Types-696x392.jpg);
+	background-repeat: no-repeat;
 }
 
 .psychic {
-	background-color: #F85888;
+	background-image : url(https://pokemongohub.net/wp-content/uploads/2019/01/Psychic-Types-696x392.jpg);
+	background-repeat: no-repeat;
 }
 
 .flying {
-	background-color: #A890F0;
+	background-image : url(https://wallpaperaccess.com/full/4186766-696x392.jpg);
+	background-repeat: no-repeat;
 }
 
 .fighting {
-	background-color: #C03028;
+	background-image : url(https://pokemongohub.net/wp-content/uploads/2019/01/Fighting-Types-696x392.jpg);
+	background-repeat: no-repeat;
 }
 
 .normal {
-	background-color: #A8A878;
+	background-image : url(https://pokemongohub.net/wp-content/uploads/2019/05/Normal-Types-696x392.jpg);
+	background-repeat: no-repeat;
 }
 
-.card:hover {
-	animation: bounce 0.5s linear;
-}
 
 .card-title {
 	text-transform: capitalize;
@@ -157,7 +191,7 @@ h1 {
 	flex-direction  : column;
 	justify-content : flex-start;
 	align-items     : center;
-	background-color: white;
+	background-color: rgba(255, 255, 255, 0.80);
 	color           : black;
 	padding         : 35px;
 	width           : 80%;
@@ -194,11 +228,25 @@ h1 {
 }
 
 .colum {
-	float      : left;
-	width      : 49.22%;
-	margin-left: 40px
+	float       : left;
+	margin-left : 40px;
+	max-height  : 350px;
+	column-width: 150px;
 }
 
+.colum li {
+	margin-top   : 5px;
+	margin-bottom: 5px;
+}
+
+.moves {
+	margin-top      : 35px;
+	border-radius   : 5px;
+	float           : left;
+	width           : -webkit-fill-available;
+	margin-left     : 40px;
+	background-color: #30a7d7;
+}
 
 .columUm ul {
 	margin         : 0;
